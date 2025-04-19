@@ -1,6 +1,6 @@
-# Data Pipeline Portfolio Project
+# Data Pipeline Portfolio Projects
 
-## Overview
+# Project 1 (Medallion) Overview
 
 This project demonstrates a complete data pipeline built using PostgreSQL to process data through a multi-layered architecture: Bronze, Silver, and Gold. The pipeline ingests raw data from CSV files, transforms and cleanses it, and produces business-ready datasets for analytics and reporting. The project showcases skills in database design, ETL (Extract, Transform, Load) processes, and data warehousing concepts like the Star Schema.
 
@@ -81,6 +81,7 @@ The project includes the following SQL scripts and stored procedures:
         ```
     * Alternatively, execute it in pgAdmin's Query Tool with a superuser account.
     * This script creates the `DataWarehouse` database and the `bronze`, `silver`, and `gold` schemas, skipping creation if they already exist.
+    * **Note**: You can also directly create the database and schemas using the pgAdmin GUI.  First, connect to the server as a superuser.  Then, create the DataWarehouse database.  After that, create the schemas bronze, silver, and gold within the DataWarehouse database.
 
 2.  **Install PostgreSQL (if not already installed):**
     * Download and install PostgreSQL from [postgresql.org](https://www.postgresql.org/).
@@ -131,7 +132,7 @@ The project includes the following SQL scripts and stored procedures:
 
 * **OS Compatibility:** The `COPY` command instructions are tailored for Windows. For Linux/Mac, adjust file paths and permissions accordingly.
 
-## Future Improvements
+## Future 
 
 * Implement incremental loading for large datasets.
 * Automate the pipeline using a scheduler (e.g., Apache Airflow).
@@ -139,3 +140,30 @@ The project includes the following SQL scripts and stored procedures:
 ## Credits
 
 DataWithBaraa - https://www.youtube.com/watch?v=9GVqKuTVANE
+
+# Project 2 (Uber) Overview
+
+This data engineering project demonstrates the end-to-end data pipeline lifecycle using modern tools and platforms. It extracts, transforms, loads, and visualizes Taxi trip data using Python, Google Cloud Platform (GCP), Mage, BigQuery, and Looker.
+
+## 📊 Dataset
+
+- **Source**: [NYC Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+- Contains records of taxi trips in NYC, including timestamps, locations, passenger counts, payment types, and trip distances.
+
+## 🧰 Tech Stack
+
+- **Python**: Data manipulation and transformation
+- **Mage**: Orchestration of ETL pipelines
+- **Google Cloud Storage (GCS)**: Data staging and storage
+- **BigQuery**: Cloud data warehouse for analytics and transformation
+- **Looker**: BI tool for dashboarding and data visualization
+
+## 📅 Data Model
+![](uber-project/uber_data_model.png)
+
+## 📈 Looker Dashboard
+![](uber-project/uber_dashboard.png)
+
+## Credits
+
+Darshill Parmar - https://www.youtube.com/watch?v=WpQECq5Hx9g&t=6130s
