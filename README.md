@@ -4,6 +4,8 @@
 
 This project demonstrates a complete data pipeline built using PostgreSQL to process data through a multi-layered architecture: Bronze, Silver, and Gold. The pipeline ingests raw data from CSV files, transforms and cleanses it, and produces business-ready datasets for analytics and reporting. The project showcases skills in database design, ETL (Extract, Transform, Load) processes, and data warehousing concepts like the Star Schema.
 
+For further exploration, the project replicates the same ETL processes using PySpark in Jupyter Notebook.
+
 ## Project Structure
 
 The pipeline is divided into three layers:
