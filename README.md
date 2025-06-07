@@ -2,19 +2,21 @@
 
 # Project 1 (Medallion) Overview
 
-This project demonstrates a complete data pipeline built using PostgreSQL to process data through a multi-layered architecture: Bronze, Silver, and Gold. The pipeline ingests raw data from CSV files, transforms and cleanses it, and produces business-ready datasets for analytics and reporting. The project showcases skills in database design, ETL (Extract, Transform, Load) processes, and data warehousing concepts like the Star Schema.
+This project showcases a complete end-to-end data pipeline leveraging PostgreSQL and Azure Synapse Analytics to implement a multi-layered data architecture following the Bronze–Silver–Gold model.
 
-For further exploration, the project replicates the same ETL processes using PySpark in Jupyter Notebook.
+## PostgreSQL Implementation
+The pipeline begins with raw data ingestion from CSV files into the Bronze layer. It then performs data cleansing and transformation in the Silver layer, and finally delivers analytics-ready datasets in the Gold layer. This version demonstrates:
+* Robust ETL (Extract, Transform, Load) processes
+* Effective database design
+* Application of data warehousing concepts such as the Star Schema
 
-## Project Structure
+## Azure Synapse Implementation
+To extend the project to a cloud-native environment, the same pipeline is replicated using Azure Synapse:
+* **Bronze layer:** Data is ingested from Azure Data Lake Storage and GitHub
+* **Silver & Gold layers:** Data is processed and transformed using Apache Spark pools in Synapse
+* The final Gold datasets are visualized through a direct connection to Power BI
 
-The pipeline is divided into three layers:
-
-* **Bronze Layer:** Stores raw, unprocessed data loaded from external CSV files.
-* **Silver Layer:** Contains cleansed and transformed data derived from the Bronze layer.
-* **Gold Layer:** Provides business-ready views (dimension and fact tables) in a Star Schema for analytics and reporting.
-
-## Scripts and Components
+## PostgreSQL Scripts and Components
 
 The project includes the following SQL scripts and stored procedures:
 
